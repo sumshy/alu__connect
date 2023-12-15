@@ -1,16 +1,15 @@
 /* HomePage.css */
 .header {
-  background-color: #333;
-  color: #fff;
+  background-color: #946274;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 70px; /* Adjust the width as needed */
+  height: auto;
   margin-left: 20px;
   border-radius: 45%;
 }
@@ -25,7 +24,7 @@ nav li {
   color: white;
 }
 nav a {
-color: #fff;
+color: #000;
 }
 /* styles.css */
 
@@ -48,11 +47,11 @@ color: #fff;
 }
 
 #hero {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 150px; 
-  background-color: #f4f4f4; 
+  display: flex; /* Make the content and image side by side */
+  justify-content: space-between; /* Put them at the ends of the main section */
+  align-items: center; /* Center vertically */
+  padding: 150px; /* Add some padding around the content */
+  background-color: #f4f4f4; /* Add a background color */
 }
 
 .hero-img {
@@ -77,7 +76,7 @@ color: #fff;
 }
 
 .cta-btn {
-  background-color: #333;
+  background-color: #4a90e2;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -151,19 +150,23 @@ color: #fff;
   display: inline-block;
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #333;
+  background-color: #007bff;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
 }
 
 .event-button:hover {
-  background-color: #333;
+  background-color: #0056b3;
 }
 
 /* EventPage*/
 
-
+.event-header {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+}
 
 .event-page {
   max-width: 1200px;
@@ -271,16 +274,30 @@ select {
 }
 
 
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
 
 /* SignUp Page */
+.sign-up-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
 
+.sign-up-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
 
+.sign-up-form {
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 
 .sign-up-form h1 {
   font-size: 24px;
@@ -288,6 +305,15 @@ footer {
   margin-bottom: 20px;
 }
 
+.form-group {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
 input {
   width: 100%;
@@ -296,66 +322,26 @@ input {
   border-radius: 5px;
 }
 
-
-
-
-
-
-
-
-/*signup*/
-
-/* You can create a new CSS file (e.g., SignUpPage.css) and link it to your SignUpPage component */
-.sign-up-page {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.sign-up-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-}
-
-.custom-sign-up-form {
-  max-width: 400px;
-}
-
-.custom-form-group {
-  margin-bottom: 15px;
-}
-
-.custom-form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.custom-form-group input,
-.custom-form-group select {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
 .sign-up-button {
-  background-color: #4caf50;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #946274;
   color: white;
-  padding: 10px 15px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .sign-up-button:hover {
-  background-color: #45a049;
+  background-color: #7d5144;
 }
 
 .google-sign-up {
-  margin-top: 20px;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .google-sign-up p {
@@ -363,29 +349,46 @@ input {
 }
 
 .google-sign-up img {
-  width: 100px;
   cursor: pointer;
+  max-width: 50px;
 }
 
-.terms-of-use {
-  margin-top: 20px;
+p {
+  text-align: center;
 }
 
+a {
+  color: #946274;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* Image on the right */
+.sign-up-image {
+  flex: 1;
+  text-align: center;
+}
+
+.sign-up-image img {
+  max-width: 500px;
+  height: 600px;
+}
 
 
 /* Host Page*/
 
 .host-event-page {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   font-family: Arial, sans-serif;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-color: #f0f0f0;
+  text-align: center;
 }
-
 .host-event-forms {
   display: flex;
   justify-content: center;
@@ -395,7 +398,7 @@ input {
 }
 
 form {
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  background-color: white;
   border: 1px solid #e0e0e0;
   padding: 20px;
   border-radius: 5px;
@@ -404,14 +407,15 @@ form {
   width: 45%;
 }
 
-
+.form-group {
+  margin-bottom: 20px;
+}
 
 label {
   display: block;
   font-size: 16px;
   margin-bottom: 5px;
 }
-
 
 input[type="text"],
 input[type="email"],
@@ -422,7 +426,6 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  transition: border-color 0.3s;
 }
 
 select {
@@ -460,92 +463,63 @@ input[type="file"] {
 }
 
 
-/*MyEvents*/
-
-.event-list {
-  justify-content: center;
- 
-}
-
-.update-button, .delete-button {
-  display: block;
-  margin: 10px auto;
-  padding: 5px 10px;
+footer {
   background-color: #333;
   color: white;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.update-button:hover, .delete-button:hover {
-  background-color: #555;
-}
-
-/* Event details*/
-
-.event-details-page {
-  background-color: #f7f7f7;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  padding: 20px;
-}
-.event-details {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 80%;
-  margin: 20px auto;
+  padding: 10px 0;
 }
 
-.event-details img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
+/* About us Page */
+
+/* Add your global styles here */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
 }
 
-.event-details h2 {
-  font-size: 24px;
-  margin: 10px 0;
-  color: #333;
-}
-
-.event-details p {
-  color: #666;
-}
-
-.attend-button {
-  background-color: #f8c520;
-  color: #333;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 20px;
-}
-
-.attend-button:hover {
-  background-color: #ffdb58;
-}
-
-
-/* About us css*/
 .about-us-page {
-  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Navigation Bar */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Mission Section */
 .mission-section {
   position: relative;
-  height: 400px; /* Adjust the height as needed */
   overflow: hidden;
+  height: 400px;
 }
 
 .mission-image {
@@ -559,185 +533,76 @@ input[type="file"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
 }
 
+/* Vision Section */
 .vision-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 50px 0; /* Adjust the padding as needed */
+  margin: 40px 0;
 }
 
 .vision-image {
-  width: 40%; /* Adjust the width as needed */
-  height: auto;
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .vision-text {
-  width: 50%; /* Adjust the width as needed */
-  text-align: left;
+  width: 45%;
 }
 
+/* Contact Us Section */
 .contact-us-section {
-  background-color: #f4f4f4; /* Adjust the background color as needed */
-  padding: 50px 0; /* Adjust the padding as needed */
+  margin-top: 40px;
 }
 
 .about-us-form-group {
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-  border: 1px solid #e0e0e0;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap
-
 }
 
 .about-us-form-group label {
   display: block;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .about-us-form-group input,
 .about-us-form-group textarea {
   width: 100%;
   padding: 10px;
-  margin-top: 8px;
   box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .send-button {
-  background-color: #4caf50; /* Green color, adjust as needed */
+  background-color: #333;
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+}
+
+.send-button:hover {
+  background-color: #555;
 }
 
 .success-message {
-  color: #4caf50; /* Green color, adjust as needed */
+  color: green;
   margin-top: 10px;
 }
 
-
-
-
-/* ADMIN DASHBOARD*/
-
-/* Add these styles to your CSS file */
-
-/* Add these styles to your CSS file */
-
-.admin-dashboard {
-  text-align: center;
-}
-
-.admin-actions {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.admin-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.admin-form-group {
-  margin-bottom: 15px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-button {
-  background-color: #4caf50;
+/* Footer */
+footer {
+  background-color: #333;
   color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-a {
-  text-decoration: none;
-  color: #4caf50;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-
-
-/*sign in page*/
-
-/* SignInPage */
-.sign-in-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-bottom: 8px;
-}
-
-input {
-  padding: 8px;
-  margin-bottom: 16px;
-}
-
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-p {
-  margin-top: 16px;
   text-align: center;
-}
-
-p a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-p a:hover {
-  text-decoration: underline;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
