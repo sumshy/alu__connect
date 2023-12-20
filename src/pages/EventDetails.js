@@ -20,6 +20,16 @@ const EventDetails = () => {
     fetchEventDetails();
   }, [eventId]);
 
+  const handleAttend = async () => {
+    try {
+      // Make a request to your backend to handle the attendance logic
+      await axios.post(`http://localhost:3000/events/${eventId}/attend`);
+      // Optionally, you can show a confirmation message or update the UI
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   if (!event) {
     return <div>Loading event details...</div>;
   }
@@ -36,8 +46,17 @@ const EventDetails = () => {
         <p>Location: {event.location}</p>
         <p>Category: {event.category}</p>
         <p>Organizer: {event.organizer}</p>
-        {/* Add more event details here */}
+        
+        {/* Attend button */}
+        <button onClick={handleAttend} className="attend-button">
+          Attend
+        </button>
       </div>
+      
+      {/* Footer */}
+      <footer className="footer">
+        <p>&copy; 2023 Alumni Connect. All rights reserved.</p>
+      </footer>
     </div>
   );
 };

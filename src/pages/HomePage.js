@@ -7,8 +7,7 @@ const HomePage = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);
   const storage = localStorage.getItem("sumaya__data");
-
-  const [user, setUser] = useState(storage ? JSON.parse(storage)?.user:null);
+  const [user, setUser] = useState(storage ? JSON.parse(storage)?.user : null);
 
   const fetchEvents = async () => {
     try {
@@ -26,15 +25,21 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    console.log("UUUUUUUUUUUU", user)
+    console.log("UUUUUUUUUUUU", user);
     fetchEvents();
   }, []);
 
   return (
     <div>
-      <Header user={user}/>
+      <Header user={user} />
 
       <main>
+        <div className="alu-connect-name">
+          <h1 className="alu-title">
+            <span style={{ color: "blue" }}>ALU</span>{" "}
+            <span style={{ color: "red" }}>Connect</span>
+          </h1>
+        </div>
         <section id="hero" className="hero">
           <div className="hero-msg">
             <span className="hero-title">STAY IN TOUCH WITH ALU</span>
@@ -55,31 +60,29 @@ const HomePage = () => {
 
       <section className="cta">
         <h2>Ready to Connect?</h2>
-        <a href="#" className="cta-btn">
+        <Link to="/signup" className="cta-btn">
           Get Started
-        </a>
+        </Link>
       </section>
 
       <section className="upcoming-events">
         <h2>Upcoming Events</h2>
-        {
-          loading ? <div>Loading...</div>:
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
           <div className="event-container">
-            {events.map((event, i)=>(
-              <div className="event-box">
-                <img src="/aluimage.jpg" alt="Event 1" />
+            {events.map((event, i) => (
+              <div className="event-box" key={i}>
+                <img src="/aluimage.jpg" alt={`Event ${i + 1}`} />
                 <p className="event-name">{event.title}</p>
                 <p className="event-description">{event.description}</p>
                 <Link to="/event" className="event-button">
                   View
                 </Link>
               </div>
-
             ))}
-
           </div>
-
-        }
+        )}
       </section>
 
       <footer>

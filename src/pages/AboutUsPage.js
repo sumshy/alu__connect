@@ -52,10 +52,15 @@ const AboutUsPage = () => {
 
   return (
     <div className="about-us-page">
-
+      
       {/* Navigation Bar */}
       <Header/>
-      
+      <div className="alu-connect-name">
+        <h1 className="alu-title">
+          <span style={{ color: "blue" }}>ALU</span>{" "}
+          <span style={{ color: "red" }}>Connect</span>
+        </h1>
+      </div>
       {/* Mission Section */}
       <div className="mission-section">
         <img

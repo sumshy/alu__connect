@@ -70,12 +70,7 @@ const SignUpPage = () => {
               Sign Up
             </button>
           </form>
-          <div className="google-sign-up">
-            <p>Or sign up with Google</p>
-            <a href="#">
-              <img src="google-logo.png" alt="Google Sign Up" />
-            </a>
-          </div>
+          
           <p>
           Already have an account? <Link to="/signin">Sign In</Link>
           </p>

@@ -26,9 +26,7 @@ const Header = ({user}) => {
           <li>
             <Link to="/signup">SIGNUP</Link>
           </li>
-          <li>
-            <Link to="/admin">ADMIN</Link>
-          </li>
+
         </ul>
       </nav>
     </header>

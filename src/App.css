@@ -1,176 +1,168 @@
-/* HomePage.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .header {
   background-color: #333;
-  color: #fff;
+  color: white;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
-  margin-left: 20px;
-  border-radius: 45%;
+  width: 80px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  gap: 20px;
 }
 
-nav li {
-  margin: 0 15px;
+nav ul li {
+  font-size: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
   color: white;
+  font-weight: bold;
 }
-nav a {
-color: #fff;
+
+nav ul li a:hover {
+  border-bottom: 2px solid white;
+  padding-bottom: 2px;
 }
-/* styles.css */
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 2rem;
+}
 
 .hero-msg {
   flex: 1;
-  text-align: left;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background to text */
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow to the text box */
+  max-width: 600px;
 }
 
 .hero-title {
-  font-size: 24px;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
 .hero-description {
-  font-size: 18px;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-#hero {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 150px; 
-  background-color: #f4f4f4; 
-}
-
-.hero-img {
-  max-width: 90%;
-  height: auto;
-  flex: 1; /* This will place the image on the right */
-  display: flex;
-  justify-content: flex-end;
-}
-
-.features ul {
-  list-style: none;
-}
-
-.features li {
-  margin: 10px 0;
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
 }
 
 .cta {
+  background-color: #ffffffe2;
+  color: #333;
   text-align: center;
-  padding: 30px 0;
+  padding: 2rem 0;
+}
+
+.cta h2 {
+  font-size: 2rem;
 }
 
 .cta-btn {
+  display: inline-block;
   background-color: #333;
-  color: white;
-  padding: 10px 20px;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
-  font-size: 18px;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
 }
 
+.cta-btn:hover {
+  background-color: #0056b3;
+}
 
-
-/*Upcoming events*/
 .upcoming-events {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-.upcoming-events h2 {
-  font-size: 24px;
-  color: #333;
+  background-color: #f8f8f8;
+  padding: 2rem;
 }
 
 .event-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .event-box {
-  flex: 1;
-  margin: 10px;
-  padding: 20px;
-  background-color: #fff;
+  width: 300px;
+  margin: 1rem;
+  padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  cursor: pointer;
-  text-align: center;
-}
-
-.event-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
 }
 
 .event-box img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  max-height: 150px;
   object-fit: cover;
-  border-radius: 50%;
-  filter: blur(0);
-  transition: filter 0.2s;
 }
 
 .event-name {
+  font-size: 1.5rem;
   font-weight: bold;
-}
-
-.event-box:hover .event-name {
-  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
 .event-description {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .event-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
+  display: block;
   background-color: #333;
-  color: #fff;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s;
 }
 
 .event-button:hover {
-  background-color: #333;
+  background-color: #0056b3;
 }
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
 
 /* EventPage*/
 
 
 
 .event-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f0f0f0;
+  padding: 20px;
+  min-height: 100vh;
 }
 .filter-section {
   display: flex;
@@ -267,110 +259,99 @@ select {
 }
 
 .view-more-button:hover {
-  background-color: #555;
+  background-color: #2980b9;
 }
 
 
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
+
 
 /* SignUp Page */
 
 
 
-.sign-up-form h1 {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 20px;
+.sign-up-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+  min-height: 100vh;
 }
 
+.sign-up-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding:20px ;
+}
 
-input {
+.custom-sign-up-form {
+  flex: 1;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+margin-right: 50px;
+justify-content: center;
+display: flex;
+flex-wrap: wrap;
+
+ 
+
+}
+
+.custom-form-group {
+  margin-bottom: 20px;
+ 
+}
+
+.custom-form-group label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline;
+}
+
+.custom-form-group input,
+.custom-form-group select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-
-
-
-
-
-
-
-/*signup*/
-
-/* You can create a new CSS file (e.g., SignUpPage.css) and link it to your SignUpPage component */
-.sign-up-page {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.sign-up-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-}
-
-.custom-sign-up-form {
-  max-width: 400px;
-}
-
-.custom-form-group {
-  margin-bottom: 15px;
-}
-
-.custom-form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.custom-form-group input,
-.custom-form-group select {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
 .sign-up-button {
-  background-color: #4caf50;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
   color: white;
-  padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .sign-up-button:hover {
-  background-color: #45a049;
+  background-color: #2980b9;
 }
 
-.google-sign-up {
-  margin-top: 20px;
+.sign-up-image {
+  flex: 1;
 }
 
-.google-sign-up p {
-  margin-bottom: 10px;
-}
-
-.google-sign-up img {
-  width: 100px;
-  cursor: pointer;
+.sign-up-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 1000px;
+  height: 550px;
 }
 
 .terms-of-use {
+  text-align: center;
   margin-top: 20px;
 }
-
 
 
 
@@ -395,7 +376,7 @@ input {
 }
 
 form {
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.7); 
   border: 1px solid #e0e0e0;
   padding: 20px;
   border-radius: 5px;
@@ -456,7 +437,26 @@ input[type="file"] {
 }
 
 .host-button:hover {
-  background-color: #555;
+  background-color: #2980b9;
+}
+
+.host-event-button {
+  position: fixed;
+  top: 180px;
+  right: 10px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.host-event-button:hover {
+  background-color: #2980b9;
 }
 
 
@@ -480,61 +480,66 @@ input[type="file"] {
 }
 
 .update-button:hover, .delete-button:hover {
-  background-color: #555;
+  background-color: #2980b9;
 }
 
 /* Event details*/
 
+
 .event-details-page {
-  background-color: #f7f7f7;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
   padding: 20px;
+  min-height: 100vh;
 }
+
 .event-details {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border: 1px solid #e0e0e0;
   padding: 20px;
-  width: 80%;
-  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .event-details img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
+  max-width: 100%;
+  border-radius: 5px;
+  transition: filter 0.3s;
+}
+
+.event-details:hover img {
+  filter: blur(2px);
 }
 
 .event-details h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 10px 0;
-  color: #333;
 }
 
 .event-details p {
-  color: #666;
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
 }
 
 .attend-button {
-  background-color: #f8c520;
-  color: #333;
-  border: none;
+  display: inline-block;
   padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
   border-radius: 5px;
-  font-weight: 500;
+  text-decoration: none;
+  margin: 20px 0;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 20px;
 }
 
 .attend-button:hover {
-  background-color: #ffdb58;
+  background-color: #2980b9;
 }
+
 
 
 /* About us css*/
@@ -544,7 +549,7 @@ input[type="file"] {
 
 .mission-section {
   position: relative;
-  height: 400px; /* Adjust the height as needed */
+  height: 400px; 
   overflow: hidden;
 }
 
@@ -566,37 +571,38 @@ input[type="file"] {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 50px 0; /* Adjust the padding as needed */
+  padding: 50px 0; 
 }
 
 .vision-image {
-  width: 40%; /* Adjust the width as needed */
+  width: 40%; 
   height: auto;
 }
 
 .vision-text {
-  width: 50%; /* Adjust the width as needed */
+  width: 50%; 
   text-align: left;
 }
 
 .contact-us-section {
-  background-color: #f4f4f4; /* Adjust the background color as needed */
-  padding: 50px 0; /* Adjust the padding as needed */
+  background-color: #f4f4f4; 
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding:20px ;
+  width: 45%;
 }
 
 .about-us-form-group {
   margin-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-  border: 1px solid #e0e0e0;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap
+
+
 
 }
+
 
 .about-us-form-group label {
   display: block;
@@ -612,7 +618,7 @@ input[type="file"] {
 }
 
 .send-button {
-  background-color: #4caf50; /* Green color, adjust as needed */
+  background-color: #333; 
   color: white;
   padding: 10px 20px;
   border: none;
@@ -622,18 +628,10 @@ input[type="file"] {
 }
 
 .success-message {
-  color: #4caf50; /* Green color, adjust as needed */
+  color: #4caf50; 
   margin-top: 10px;
 }
 
-
-
-
-/* ADMIN DASHBOARD*/
-
-/* Add these styles to your CSS file */
-
-/* Add these styles to your CSS file */
 
 .admin-dashboard {
   text-align: center;
@@ -654,42 +652,7 @@ input[type="file"] {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.admin-form-group {
-  margin-bottom: 15px;
-}
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-a {
-  text-decoration: none;
-  color: #4caf50;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-
-
-/*sign in page*/
 
 /* SignInPage */
 .sign-in-container {
@@ -716,7 +679,7 @@ input {
 }
 
 button {
-  background-color: #007bff;
+  background-color: #333;
   color: #fff;
   padding: 10px;
   border: none;

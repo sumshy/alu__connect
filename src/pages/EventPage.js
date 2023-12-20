@@ -47,7 +47,9 @@ const EventPage = () => {
     <div className="event-page">
       <Header />
       <h1>All Events</h1>
-
+      <Link to="/hostevent" className="host-event-button">
+        Host Event
+      </Link>
       <div className="filter-section">
         <label>Filter by:</label>
         <label>
