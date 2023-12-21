@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = ({user}) => {
-
-
-
+const Header = ({ user }) => {
   return (
     <header className="header">
       <img src="ALU.png" alt="Alumni Connect Logo" className="logo" />
@@ -19,14 +16,14 @@ const Header = ({user}) => {
           <li>
             <Link to="/about">ABOUT</Link>
           </li>
-          {user?.role === "admin" &&
-          <li>
-            <Link to="/about">ALUMNI</Link>
-          </li>}
+          {user?.role === "admin" && (
+            <li>
+              <Link to="/admin">ALUMNI</Link>
+            </li>
+          )}
           <li>
             <Link to="/signup">SIGNUP</Link>
           </li>
-
         </ul>
       </nav>
     </header>

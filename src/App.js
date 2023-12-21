@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import EventsList from "./components/EventsList";
-import EventForm from "./components/EventForm";
-
-import "./App.css";
-
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css';
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import EventPage from "./pages/EventPage";
@@ -14,6 +10,7 @@ import HostEventPage from "./pages/HostEventPage";
 import MyEventsPage from "./pages/MyEventsPage";
 import UpdateEventPage from "./pages/UpdateEventPage";
 import SignInPage from "./pages/SignInPage";
+import AdminPage from "./pages/AdminPage"; // Import AdminPage
 
 const mockEvents = [
   {
@@ -33,7 +30,7 @@ const mockEvents = [
 ];
 
 function App() {
-  const [events, setEvents] = useState(mockEvents);
+  const [events, setEvents] = React.useState(mockEvents);
 
   const addEvent = (newEvent) => {
     // setEvents([...events, newEvent]);
@@ -56,6 +53,8 @@ function App() {
           <Route path="/myevents" element={<MyEventsPage />} />
           <Route path="/update/:eventid" element={<UpdateEventPage />} />
           <Route path="/signin" element={<SignInPage />} />
+          {/* Add the route for AdminPage */}
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </BrowserRouter>
     </div>

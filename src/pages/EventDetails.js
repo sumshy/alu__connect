@@ -20,15 +20,18 @@ const EventDetails = () => {
     fetchEventDetails();
   }, [eventId]);
 
-  const handleAttend = async () => {
-    try {
-      // Make a request to your backend to handle the attendance logic
-      await axios.post(`http://localhost:3000/events/${eventId}/attend`);
-      // Optionally, you can show a confirmation message or update the UI
-    } catch (error) {
-      console.log(error);
-    }
-  };
+// EventDetails.js (or similar)
+const handleAttend = async () => {
+  try {
+    // Make a request to your backend to handle the attendance logic
+    await axios.post(`http://localhost:3000/events/${eventId}/attend`);
+    // Optionally, you can show a confirmation message or update the UI
+    console.log("Attendance recorded and email sent");
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 
   if (!event) {
     return <div>Loading event details...</div>;
