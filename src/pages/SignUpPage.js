@@ -9,7 +9,7 @@ const SignUpPage = () => {
     name: '',
     email: '',
     password: '',
-    role: 'alumni', // Default role is alumni
+    role: 'alumni',
   });
 
   const handleInputChange = (e) => {
@@ -31,7 +31,7 @@ const SignUpPage = () => {
         navigate("/signin")
       }
 
-      // Handle the response, redirect, or perform additional actions
+      
     } catch (error) {
       console.error('Error signing up:', error);
     }

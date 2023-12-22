@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Header from './Header'; // Import the Header component
+import Header from './Header'; 
 import axios from 'axios';
 
 const SignInPage = () => {
-  // State to manage email and password input
+ 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const navigate = useNavigate();
-  // Function to handle sign-in button click
+ 
   const handleSignIn = async() => {
 
     try {

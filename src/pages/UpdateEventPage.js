@@ -4,7 +4,7 @@ import axios from 'axios';
 import Header from './Header';
 
 const UpdateEventPage = () => {
-  const { eventid } = useParams(); // Get the event ID from the route parameter
+  const { eventid } = useParams();
   const navigate = useNavigate();
   
   const [eventDetails, setEventDetails] = useState({
@@ -20,7 +20,7 @@ const UpdateEventPage = () => {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    // Fetch event details based on the eventid
+    
     const fetchEventDetails = async () => {
       try {
         setLoading(true);

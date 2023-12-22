@@ -34,7 +34,7 @@ const AboutUsPage = () => {
 
       if (response.ok) {
         setSuccessMessage('Message sent successfully');
-        // Clear the form after successful submission
+    
         setFormData({
           name: '',
           email: '',

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import Header from "./Header"; // Import your Header component
+import Header from "./Header"; 
 
 const EventDetails = () => {
   const { eventId } = useParams();
@@ -22,16 +22,16 @@ const EventDetails = () => {
     fetchEventDetails();
   }, [eventId]);
 
-  // EventDetails.js (or similar)
+  
   const data = JSON.parse(localStorage.getItem("sumaya__data"));
   const handleAttend = async () => {
     try {
-      // Make a request to your backend to handle the attendance logic
+      
       await axios.post(`https://alu-connect-api.onrender.com/events/${eventId}/attend`, {
         userId: data?.user._id,
       });
 
-      // Display a prompt message
+      
       window.alert("Attendance recorded successfully!");
       setTimeout(() => {
         window.location.reload();

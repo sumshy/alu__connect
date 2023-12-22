@@ -10,7 +10,7 @@ import HostEventPage from "./pages/HostEventPage";
 import MyEventsPage from "./pages/MyEventsPage";
 import UpdateEventPage from "./pages/UpdateEventPage";
 import SignInPage from "./pages/SignInPage";
-import AdminPage from "./pages/AdminPage"; // Import AdminPage
+import AdminPage from "./pages/AdminPage"; 
 
 const mockEvents = [
   {
@@ -53,7 +53,6 @@ function App() {
           <Route path="/myevents" element={<MyEventsPage />} />
           <Route path="/update/:eventid" element={<UpdateEventPage />} />
           <Route path="/signin" element={<SignInPage />} />
-          {/* Add the route for AdminPage */}
           <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </BrowserRouter>
