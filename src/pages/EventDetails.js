@@ -27,7 +27,7 @@ const EventDetails = () => {
   const handleAttend = async () => {
     try {
       // Make a request to your backend to handle the attendance logic
-      await axios.post(`http://localhost:3000/events/${eventId}/attend`, {
+      await axios.post(`https://alu-connect-api.onrender.com/events/${eventId}/attend`, {
         userId: data?.user._id,
       });
 
