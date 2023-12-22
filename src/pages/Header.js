@@ -18,7 +18,7 @@ const Header = ({ user }) => {
           </li>
           {user?.role === "admin" && (
             <li>
-              <Link to="/admin">ALUMNI</Link>
+              <Link to="/admin">ADMIN</Link>
             </li>
           )}
           <li>

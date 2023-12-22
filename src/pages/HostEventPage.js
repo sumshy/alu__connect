@@ -31,7 +31,7 @@ const HostEventPage = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:3000/events', eventDetails);
+      const response = await axios.post('https://alu-connect-api.onrender.com/events', eventDetails);
       if (response.data) {
         console.log('Successfully created the event', response);
         setMessage('Event successfully created');

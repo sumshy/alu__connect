@@ -10,7 +10,7 @@ const EventDetails = () => {
   useEffect(() => {
     const fetchEventDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/events/${eventId}`);
+        const response = await axios.get(`https://alu-connect-api.onrender.com/events/${eventId}`);
         setEvent(response.data);
       } catch (error) {
         console.log(error);
@@ -24,7 +24,7 @@ const EventDetails = () => {
 const handleAttend = async () => {
   try {
     // Make a request to your backend to handle the attendance logic
-    await axios.post(`http://localhost:3000/events/${eventId}/attend`);
+    await axios.post(`https://alu-connect-api.onrender.com/events/${eventId}/attend`);
     // Optionally, you can show a confirmation message or update the UI
     console.log("Attendance recorded and email sent");
   } catch (error) {

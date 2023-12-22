@@ -25,7 +25,7 @@ const SignUpPage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/auth/signup', formData);
+      const response = await axios.post('https://alu-connect-api.onrender.com/auth/signup', formData);
       console.log(response.data);
       if(response.data){
         navigate("/signin")

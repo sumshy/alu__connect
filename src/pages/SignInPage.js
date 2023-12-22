@@ -13,7 +13,7 @@ const SignInPage = () => {
   const handleSignIn = async() => {
 
     try {
-      const response = await axios.post("http://localhost:3000/auth/signin", {email, password});
+      const response = await axios.post("https://alu-connect-api.onrender.com/auth/signin", {email, password});
 
       if(response.data){
         localStorage.setItem("sumaya__data", JSON.stringify(response.data));

@@ -24,7 +24,7 @@ const UpdateEventPage = () => {
     const fetchEventDetails = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:3000/events/${eventid}`);
+        const response = await axios.get(`https://alu-connect-api.onrender.com/events/${eventid}`);
         if (response.data) {
           const eventData = response.data;
           setEventDetails({

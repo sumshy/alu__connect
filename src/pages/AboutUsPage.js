@@ -23,7 +23,7 @@ const AboutUsPage = () => {
     e.preventDefault();
 
     try {
-        const response = await fetch('http://localhost:3000/about-us', {
+        const response = await fetch('https://alu-connect-api.onrender.com/about-us', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

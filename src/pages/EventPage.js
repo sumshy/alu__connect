@@ -35,7 +35,7 @@ const EventPage = () => {
   const handleDelete = async (eventId) => {
     // Implement the logic for deleting an event
     try {
-      await axios.delete(`http://localhost:3000/events/${eventId}`);
+      await axios.delete(`https://alu-connect-api.onrender.com/events/${eventId}`);
       // Refresh the events after deletion
       fetchEvents();
     } catch (error) {

@@ -12,7 +12,7 @@ const AdminPage = ({ user }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/auth/user"); // Update the URL
+        const response = await axios.get("https://alu-connect-api.onrender.com/auth/user"); // Update the URL
         setUsers(response.data);
       } catch (error) {
         console.error("Error fetching users:", error);
