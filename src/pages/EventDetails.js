@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import axios from 'axios';
-import Header from './Header'; // Import your Header component
+import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import axios from "axios";
+import Header from "./Header"; // Import your Header component
 
 const EventDetails = () => {
   const { eventId } = useParams();
@@ -10,7 +10,9 @@ const EventDetails = () => {
   useEffect(() => {
     const fetchEventDetails = async () => {
       try {
-        const response = await axios.get(`https://alu-connect-api.onrender.com/events/${eventId}`);
+        const response = await axios.get(
+          `https://alu-connect-api.onrender.com/events/${eventId}`
+        );
         setEvent(response.data);
       } catch (error) {
         console.log(error);
@@ -20,18 +22,24 @@ const EventDetails = () => {
     fetchEventDetails();
   }, [eventId]);
 
-// EventDetails.js (or similar)
-const handleAttend = async () => {
-  try {
-    // Make a request to your backend to handle the attendance logic
-    await axios.post(`https://alu-connect-api.onrender.com/events/${eventId}/attend`);
-    // Optionally, you can show a confirmation message or update the UI
-    console.log("Attendance recorded and email sent");
-  } catch (error) {
-    console.log(error);
-  }
-};
+  // EventDetails.js (or similar)
+  const data = JSON.parse(localStorage.getItem("sumaya__data"));
+  const handleAttend = async () => {
+    try {
+      // Make a request to your backend to handle the attendance logic
+      await axios.post(`http://localhost:3000/events/${eventId}/attend`, {
+        userId: data?.user._id,
+      });
 
+      // Display a prompt message
+      window.alert("Attendance recorded successfully!");
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   if (!event) {
     return <div>Loading event details...</div>;
@@ -49,13 +57,14 @@ const handleAttend = async () => {
         <p>Location: {event.location}</p>
         <p>Category: {event.category}</p>
         <p>Organizer: {event.organizer}</p>
-        
+
         {/* Attend button */}
-        <button onClick={handleAttend} className="attend-button">
-          Attend
-        </button>
+        {!event?.attendees?.includes(data?.user?._id) && (
+          <button onClick={handleAttend} className="attend-button">
+            Attend
+          </button>
+        )}
       </div>
-      
       {/* Footer */}
       <footer className="footer">
         <p>&copy; 2023 Alumni Connect. All rights reserved.</p>
