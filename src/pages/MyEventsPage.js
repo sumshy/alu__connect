@@ -27,7 +27,7 @@ const MyEventsPage = () => {
   const handleDeleteEvent = async (eventId) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
       try {
-        const response = await axios.delete(`http://localhost:3000/events/${eventId}`);
+        const response = await axios.delete(`https://alu-connect-api.onrender.com/events/${eventId}`);
         if (response.data) {
           console.log('Event deleted successfully', response);
           alert('Event successfully deleted');

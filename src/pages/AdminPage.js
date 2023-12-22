@@ -27,7 +27,7 @@ const AdminPage = ({ user }) => {
 
   const handleDeleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:3000/auth/user/${userId}`);
+      await axios.delete(`https://alu-connect-api.onrender.com/auth/user/${userId}`);
       setUsers((prevUsers) => prevUsers.filter((user) => user._id !== userId));
     } catch (error) {
       console.error("Error deleting user:", error);

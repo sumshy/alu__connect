@@ -11,7 +11,7 @@ const EventPage = () => {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:3000/events");
+      const response = await axios.get("https://alu-connect-api.onrender.com/events");
       if (response.data) {
         console.log('event data from server', response.data);
         setEvents(response.data);

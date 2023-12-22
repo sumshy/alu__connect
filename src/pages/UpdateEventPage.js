@@ -60,7 +60,7 @@ const UpdateEventPage = () => {
 
     try {
       setLoading(true);
-      const response = await axios.put(`http://localhost:3000/events/${eventid}`, eventDetails);
+      const response = await axios.put(`https://alu-connect-api.onrender.com/events/${eventid}`, eventDetails);
       if (response.data) {
         console.log('Successfully updated the event', response);
         setMessage('Event successfully updated');
